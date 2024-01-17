@@ -8,3 +8,11 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
     ports:
       - "8180:8080"
+  
+  stock:
+    build:
+      dockerfile: Stock/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "8280:8080"

@@ -20,7 +20,5 @@ services:
   payments:
     build:
       dockerfile: Payments/Dockerfile
-    environment:
-      ASPNETCORE_ENVIRONMENT: Development
     ports:
       - "8380:8080"

@@ -6,11 +6,14 @@ string[] products = ["milk", "bread", "cheese", "apples", "oranges", "bananas", 
 
 app.MapGet("/products", () =>
 {
+    Console.WriteLine("GetProducts");
     return products;
 });
 
 app.MapPost("/products/reserve", (string product) =>
 {
+    Console.WriteLine($"ReserveProduct {product}");
+
     if (!products.Contains(product))
         return Results.BadRequest("Product not found");
 

@@ -1,5 +1,26 @@
 # Глава I. Логирование
 
-```shell
-git checkout `git log --all --grep='Add console logs' --pretty=format:'%H'`
+Логи — произвольное текстовое описание событий, происходящих в системе.
+
+## Логирование в консоль
+
+Пример:
+
+```csharp
+Console.WriteLine("Я есть лог");
 ```
+
+Ещё примеры:
+- [Склад](../Stock/Program.cs)
+- [Оплата](../Payments/Program.cs)
+- [Витрина](../Shop/Program.cs)
+
+Запустим приложения:
+
+```shell
+docker-compose up
+```
+
+[Улучшаем логи →](./1-2-file-logs.md)
+
+[← Введение](./0-2-intro.md)

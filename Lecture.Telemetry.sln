@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentatio
 		presentation\0-1-about-speaker.md = presentation\0-1-about-speaker.md
 		presentation\0-2-intro.md = presentation\0-2-intro.md
 		presentation\1-1-logs-intro.md = presentation\1-1-logs-intro.md
+		presentation\1-2-file-logs.md = presentation\1-2-file-logs.md
 	EndProjectSection
 EndProject
 Global

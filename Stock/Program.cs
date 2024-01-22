@@ -7,6 +7,7 @@ var app = builder.Build();
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("stock.log")
+    .WriteTo.Seq("http://seq")
     .CreateLogger();
 
 string[] products = ["milk", "bread", "cheese", "apples", "oranges", "bananas", "eggs", "chicken", "fish", "tomatoes"];
@@ -19,7 +20,7 @@ app.MapGet("/products", () =>
 
 app.MapPost("/products/reserve", (string product) =>
 {
-    Log.Information($"ReserveProduct {product}");
+    Log.Information("ReserveProduct {Product}", product);
 
     if (!products.Contains(product))
         return Results.BadRequest("Product not found");

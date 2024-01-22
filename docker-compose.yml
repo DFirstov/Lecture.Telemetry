@@ -2,23 +2,30 @@ version: "3.3"
 
 services:
   shop:
+    image: shop:no-telemetry
+    container_name: shop
     build:
       dockerfile: Shop/Dockerfile
     ports:
       - "8180:8080"
 
   stock:
+    image: stock:no-telemetry
+    container_name: stock
     build:
       dockerfile: Stock/Dockerfile
     ports:
       - "8280:8080"
 
   payments:
+    image: payments:no-telemetry
+    container_name: payments
     build:
       dockerfile: Payments/Dockerfile
     ports:
       - "8380:8080"
 
   load-test:
+    container_name: load-test
     build:
       dockerfile: LoadTest/Dockerfile

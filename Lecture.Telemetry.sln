@@ -5,6 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3E7E394-A6C0-4A90-8150-4EDCB5D79B21}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock", "Stock\Stock.csproj", "{853C70A1-F011-4A0C-9AD7-60C897225B77}"
@@ -12,6 +13,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments", "Payments\Payments.csproj", "{4430E19A-C454-4060-84E1-F4DE269012DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTest", "LoadTest\LoadTest.csproj", "{2C844419-D1B5-4E01-8769-409A7E145FCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{2E5806DE-6B66-4CBB-B1FC-93E8552E2484}"
+	ProjectSection(SolutionItems) = preProject
+		presentation\0-1-about-speaker.md = presentation\0-1-about-speaker.md
+		presentation\0-2-intro.md = presentation\0-2-intro.md
+		presentation\1-1-logs-intro.md = presentation\1-1-logs-intro.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +43,8 @@ Global
 		{2C844419-D1B5-4E01-8769-409A7E145FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C844419-D1B5-4E01-8769-409A7E145FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C844419-D1B5-4E01-8769-409A7E145FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E5806DE-6B66-4CBB-B1FC-93E8552E2484} = {B3E7E394-A6C0-4A90-8150-4EDCB5D79B21}
 	EndGlobalSection
 EndGlobal

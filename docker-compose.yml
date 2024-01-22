@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   shop:
-    image: shop:console-logs
+    image: shop:file-logs
     container_name: shop
     build:
       dockerfile: Shop/Dockerfile
@@ -10,7 +10,7 @@ services:
       - "8180:8080"
 
   stock:
-    image: stock:console-logs
+    image: stock:file-logs
     container_name: stock
     build:
       dockerfile: Stock/Dockerfile
@@ -18,7 +18,7 @@ services:
       - "8280:8080"
 
   payments:
-    image: payments:console-logs
+    image: payments:file-logs
     container_name: payments
     build:
       dockerfile: Payments/Dockerfile

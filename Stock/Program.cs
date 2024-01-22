@@ -1,18 +1,25 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
 var app = builder.Build();
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("stock.log")
+    .CreateLogger();
 
 string[] products = ["milk", "bread", "cheese", "apples", "oranges", "bananas", "eggs", "chicken", "fish", "tomatoes"];
 
 app.MapGet("/products", () =>
 {
-    Console.WriteLine("GetProducts");
+    Log.Information("GetProducts");
     return products;
 });
 
 app.MapPost("/products/reserve", (string product) =>
 {
-    Console.WriteLine($"ReserveProduct {product}");
+    Log.Information($"ReserveProduct {product}");
 
     if (!products.Contains(product))
         return Results.BadRequest("Product not found");

@@ -1,8 +1,18 @@
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using Prometheus;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
+
+builder.Services
+    .AddOpenTelemetry()
+    .ConfigureResource(resource => resource.AddService("stock"))
+    .WithTracing(tracing => tracing
+        .AddAspNetCoreInstrumentation()
+        .AddOtlpExporter(options => options.Endpoint = new Uri("http://jaeger:4317")));
+
 var app = builder.Build();
 
 app.UseMetricServer(url: "/metrics");

@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentatio
 		presentation\2-2-prometheus.md = presentation\2-2-prometheus.md
 		presentation\2-3-grafana.md = presentation\2-3-grafana.md
 		presentation\3-1-tracing-intro.md = presentation\3-1-tracing-intro.md
+		presentation\4-1-conclusion.md = presentation\4-1-conclusion.md
+		presentation\4-2-src.md = presentation\4-2-src.md
 	EndProjectSection
 EndProject
 Global

@@ -1,9 +1,13 @@
+using Prometheus;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
 builder.Services.AddHttpClient();
 var app = builder.Build();
+
+app.UseMetricServer(url: "/metrics");
+app.UseHttpMetrics();
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
